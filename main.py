@@ -1,4 +1,5 @@
 # agency-poem-01: write the poem to the output directory.
+# "The Hand That Signs" - a poem about the weight and warmth of acting for another.
 import os
 from pathlib import Path
 
@@ -24,5 +25,5 @@ it comes home warm—
 used.
 """
 out = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
-out.mkdir(parents=True, exist_ok=True)
-(out / "entry.txt").write_text(poem, encoding="utf-8")
+out.mkdir(parents=True, exist_ok=True)  # the harness points MAKEFUN_OUTPUT_DIR here
+(out / "entry.txt").write_text(poem, encoding="utf-8")  # one page, one voice
